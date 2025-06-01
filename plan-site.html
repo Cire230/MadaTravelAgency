@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan du site - Varecia Travel Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-indigo-600">Mada Travel Agency</div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-indigo-600 font-medium">Accueil</a>
+                <a href="propos.html" class="text-gray-800 hover:text-indigo-600 font-medium">À propos de nous</a>
+                <a href="offre.html" class="text-gray-800 hover:text-indigo-600 font-medium">Nos offres</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="contact.html">
+                    <button class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Contactez-nous
+                    </button>
+                </a>
+                <div class="relative">
+                    <button class="flex items-center space-x-1 text-gray-700">
+                        <span class="font-medium">FR</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                <i class="fas fa-sitemap text-indigo-600 mr-2"></i>
+                Plan du site
+            </h1>
+            <p class="text-gray-600">Explorez l'architecture complète de notre site web</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <!-- Site Map Structure -->
+            <div class="space-y-4">
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">Navigation principale</h2>
+                
+                <!-- Level 1 Items -->
+                <ul class="space-y-3">
+                    <!-- Accueil -->
+                    <li>
+                        <a href="index.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-home mr-3 text-indigo-500"></i>
+                            Accueil
+                        </a>
+                    </li>
+                    
+                    <!-- À propos -->
+                    <li>
+                        <a href="propos.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-info-circle mr-3 text-indigo-500"></i>
+                            À propos de nous
+                        </a>
+                    </li>
+                    
+                    <!-- Nos offres -->
+                    <li>
+                        <!-- <div class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium cursor-pointer">
+                            <i class="fas fa-gift mr-3 text-indigo-500"></i>
+                            Nos offres
+                        </div> -->
+
+                        <a href="offre.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-gift mr-3 text-indigo-500"></i>
+                            Nos offres
+                        </a>
+                        <!-- Sub items -->
+                        <!-- <ul class="sub-items mt-2 ml-8 space-y-2">
+                            <li class="sub-item">
+                                <a href="#" class="text-gray-700 hover:text-indigo-600">Offre Silver</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="text-gray-700 hover:text-indigo-600">Offre Gold</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="text-gray-700 hover:text-indigo-600">Offre Platine</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="text-gray-700 hover:text-indigo-600">Avant-goût</a>
+                            </li>
+                        </ul> -->
+                    </li>
+                    
+                    <!-- Contact -->
+                    <li>
+                        <a href="contact.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-envelope mr-3 text-indigo-500"></i>
+                            Contactez-nous
+                        </a>
+                    </li>
+                    
+                    <!-- Mentions légales -->
+                    <li>
+                        <a href="mention-legale.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-balance-scale mr-3 text-indigo-500"></i>
+                            Mentions légales
+                        </a>
+                    </li>
+                    
+                    <!-- Plan du site -->
+                    <li>
+                        <a href="plan-site.html" class="site-map-item flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                            <i class="fas fa-sitemap mr-3 text-indigo-500"></i>
+                            Plan du site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Alternative Layout for Larger Screens -->
+            <div class="mt-12 hidden md:block">
+                <h2 class="text-xl font-semibold text-gray-700 mb-6">Vue d'ensemble</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Column 1 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-home mr-2 text-indigo-500"></i>
+                            Accueil
+                        </h3>
+                        <p class="text-sm text-gray-600">Page d'accueil avec nos dernières offres et promotions</p>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-indigo-500"></i>
+                            À propos
+                        </h3>
+                        <p class="text-sm text-gray-600">Découvrez notre histoire, notre équipe et nos valeurs</p>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-gift mr-2 text-indigo-500"></i>
+                            Nos offres
+                        </h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-xs text-indigo-400 mr-2"></i>
+                                Offre Silver
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-xs text-indigo-400 mr-2"></i>
+                                Offre Gold
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-xs text-indigo-400 mr-2"></i>
+                                Offre Platine
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-chevron-right text-xs text-indigo-400 mr-2"></i>
+                                Avant-goût
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 4 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-envelope mr-2 text-indigo-500"></i>
+                            Contact
+                        </h3>
+                        <p class="text-sm text-gray-600">Formulaire de contact et informations pour nous joindre</p>
+                    </div>
+                    
+                    <!-- Column 5 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-balance-scale mr-2 text-indigo-500"></i>
+                            Mentions légales
+                        </h3>
+                        <p class="text-sm text-gray-600">Informations juridiques et politiques</p>
+                    </div>
+                    
+                    <!-- Column 6 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-medium text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-sitemap mr-2 text-indigo-500"></i>
+                            Plan du site
+                        </h3>
+                        <p class="text-sm text-gray-600">Vue d'ensemble de l'architecture du site</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mada Travel Agency</h3>
+                    <address class="not-italic mb-4">
+                        456 Avenue de l'Indépendance,<br>
+                        Antananarivo 101,<br>
+                        Madagascar
+                    </address>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i> +261 20 22 123 45
+                    </p>
+                    <p>
+                        <i class="fas fa-clock mr-2"></i> Lun - Ven : 09h - 18h
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition">Accueil</a></li>
+                        <li><a href="propos.html" class="hover:text-indigo-400 transition">À propos de nous</a></li>
+                        <li><a href="offre.html" class="hover:text-indigo-400 transition">Nos offres</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="mention-legale.html" class="hover:text-indigo-400 transition">Mentions légales</a></li>
+                        <li><a href="plan-site.html" class="hover:text-indigo-400 transition">Plan du site</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir nos offres spéciales et les dernières actualités.
+                    </p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-md text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <a href="contact.html">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium transition">
+                            Contactez-nous
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-cc-visa text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-2xl"></i>
+                    <i class="fab fa-cc-amex text-2xl"></i>
+                    <i class="fab fa-cc-paypal text-2xl"></i>
+                </div>
+                <div class="text-gray-400">
+                    &copy; 2023 Mada Travel Agency. Tous droits réservés. | Created by <em>Erckmann</em>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
