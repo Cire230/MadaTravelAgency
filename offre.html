@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuits Madagascar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-indigo-600">Varecia Travel Agency</div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-indigo-600 font-medium">Accueil</a>
+                <a href="propos.html" class="text-gray-800 hover:text-indigo-600 font-medium">À propos de nous</a>
+                <a href="offre.html" class="text-gray-800 hover:text-indigo-600 font-medium">Nos offres</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="contact.html">
+                    <button class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Contactez-nous
+                    </button>
+                </a>
+                <div class="relative">
+                    <button class="flex items-center space-x-1 text-gray-700">
+                        <span class="font-medium">FR</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+  <!-- En-tête -->
+  <section class="py-16 text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Explorez Nos Circuits Uniques à Madagascar</h1>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto">
+      Découvrez la richesse de l'Île Rouge à travers nos offres soigneusement élaborées. Des aventures authentiques,
+      des paysages à couper le souffle et des rencontres inoubliables vous attendent.
+    </p>
+  </section>
+
+  <!-- Grille d'offres -->
+  <section class="px-4 pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/bandeau (1).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/bandeau (2).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/bandeau (3).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/bandeau (4).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/voyage (3).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img src="assets/img/voyage (4).jpg" alt="Sainte Marie" class="w-full h-52 object-cover">
+            <div class="p-6 cursor-pointer" onclick="toggleDropdown(this)">
+                <!-- Toujours visible -->
+                <h3 class="text-xl font-semibold mb-2">Composez Votre Échappée Tropicale</h3>
+                <p class="text-indigo-600 font-bold mb-1">À partir de 1100 € / Personne</p>
+                <p class="text-sm text-gray-600 mb-4">🕒 10 JOURS</p>
+
+                <!-- Dropdown caché par défaut -->
+                <div class="dropdown-content mt-4 border-t pt-4">
+                <label for="itineraire" class="block mb-2 font-medium">Itinéraire</label>
+                <select id="itineraire" class="w-full mb-4 border border-gray-300 rounded p-2">
+                    <option>Plages et détente</option>
+                    <option>Aventure & randonnée</option>
+                    <option>Circuit culturel</option>
+                </select>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Activités :</label>
+                    <div class="space-y-1 text-sm">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Observation des baleines (saisonnier)</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Randonnée en forêt primaire</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Plongée / Snorkeling</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Rencontre culturelle</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2"> Atelier de cuisine locale</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="contact.html"><button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Demander un devis</button></a>
+                    <a href="reservation.html"><button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Réserver</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mada Travel Agency</h3>
+                    <address class="not-italic mb-4">
+                        456 Avenue de l'Indépendance,<br>
+                        Antananarivo 101,<br>
+                        Madagascar
+                    </address>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i> +261 20 22 123 45
+                    </p>
+                    <p>
+                        <i class="fas fa-clock mr-2"></i> Lun - Ven : 09h - 18h
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition">Accueil</a></li>
+                        <li><a href="propos.html" class="hover:text-indigo-400 transition">À propos de nous</a></li>
+                        <li><a href="offre.html" class="hover:text-indigo-400 transition">Nos offres</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="mention-legale.html" class="hover:text-indigo-400 transition">Mentions légales</a></li>
+                        <li><a href="plan-site.html" class="hover:text-indigo-400 transition">Plan du site</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir nos offres spéciales et les dernières actualités.
+                    </p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-md text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <a href="contact.html">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium transition">
+                            Contactez-nous
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-cc-visa text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-2xl"></i>
+                    <i class="fab fa-cc-amex text-2xl"></i>
+                    <i class="fab fa-cc-paypal text-2xl"></i>
+                </div>
+                <div class="text-gray-400">
+                    &copy; 2023 Mada Travel Agency. Tous droits réservés. | Created by <em>Erckmann</em>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
