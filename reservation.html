@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation - Informations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div class="flex items-center">
+              <div class="text-2xl font-bold text-indigo-600">Mada Travel Agency</div>
+          </div>
+          
+          <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-gray-800 hover:text-indigo-600 font-medium">Accueil</a>
+              <a href="propos.html" class="text-gray-800 hover:text-indigo-600 font-medium">À propos de nous</a>
+              <a href="offre.html" class="text-gray-800 hover:text-indigo-600 font-medium">Nos offres</a>
+          </nav>
+          
+          <div class="flex items-center space-x-4">
+              <a href="contact.html">
+                  <button class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                      Contactez-nous
+                  </button>
+              </a>
+              <div class="relative">
+                  <button class="flex items-center space-x-1 text-gray-700">
+                      <span class="font-medium">FR</span>
+                      <i class="fas fa-chevron-down text-xs"></i>
+                  </button>
+              </div>
+              <button class="md:hidden text-gray-700">
+                  <i class="fas fa-bars text-xl"></i>
+              </button>
+          </div>
+      </div>
+  </header>
+    
+  <!-- Barre de progression -->
+  <div class="w-full bg-white py-6 px-4 shadow">
+    <div class="flex items-center justify-center space-x-4">
+      <div class="text-indigo-600 font-semibold">Informations</div>
+      <div class="w-6 h-px bg-indigo-600"></div>
+      <div class="text-gray-400">Paiement</div>
+      <div class="w-6 h-px bg-gray-300"></div>
+      <div class="text-gray-400">Confirmation</div>
+    </div>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+    <!-- Formulaire principal -->
+    <div class="md:col-span-2 bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-2xl font-semibold mb-6">MON VOYAGE A MADAGASCAR</h2>
+
+      <!-- Champs du voyage -->
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium mb-1">Date de départ</label>
+          <div class="relative">
+            <input type="date" class="w-full border-gray-300 rounded p-2 pr-10 bg-gray-100">
+            <i class="fas fa-calendar absolute right-3 top-3 text-gray-500"></i>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Nombre de voyageurs</label>
+          <div class="relative">
+            <select class="w-full border-gray-300 rounded p-2 pr-10 bg-gray-100">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4+</option>
+            </select>
+            <i class="fas fa-user absolute right-3 top-3 text-gray-500"></i>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Itinéraire</label>
+          <div class="relative">
+            <select class="w-full border-gray-300 rounded p-2 pr-10 bg-gray-100">
+              <option>Tana - Majunga</option>
+              <option>Sud Malgache</option>
+              <option>Est Tropical</option>
+            </select>
+            <!-- <i class="fas fa-chevron-down absolute right-3 top-3 text-gray-500"></i> -->
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-6">
+
+      <!-- Info voyageur -->
+      <h3 class="text-lg font-semibold mb-4">INFORMATION VOYAGEUR</h3>
+      <h4 class="text-md font-medium mb-4">Voyageur N°01</h4>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Genre*</label>
+          <select class="w-full border-gray-300 rounded p-2 bg-gray-100">
+            <option>Homme</option>
+            <option>Femme</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Prénom*</label>
+          <input type="text" class="w-full border-gray-300 rounded p-2 bg-gray-100">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Nom*</label>
+          <input type="text" class="w-full border-gray-300 rounded p-2 bg-gray-100">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Date de naissance*</label>
+          <input type="date" class="w-full border-gray-300 rounded p-2 bg-gray-100">
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium mb-1">Téléphone*</label>
+          <input type="tel" class="w-full border-gray-300 rounded p-2 bg-gray-100">
+        </div>
+      </div>
+
+      <!-- Bouton valider -->
+      <div class="mt-8 text-center">
+        <button onclick="afficherPopup()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded text-lg">Valider</button>
+      </div>
+    </div>
+
+    <!-- Récapitulatif -->
+    <div class="bg-white rounded-xl shadow-md p-6 h-fit">
+      <h3 class="text-lg font-semibold mb-4">Récapitulatif</h3>
+      <p class="mb-2"><span class="font-medium">Itinéraire :</span> Tana - Majunga</p>
+      <p class="mb-2"><span class="font-medium">Durée du voyage :</span> 10 Jours</p>
+      <p class="mb-2"><span class="font-medium">Date :</span> 12 Juin 2024</p>
+      <p class="mb-4"><span class="font-medium">Nombre de voyageurs :</span> 2</p>
+      <hr class="my-4">
+      <p class="text-xl font-bold text-indigo-600">Prix total : 200 €</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mada Travel Agency</h3>
+                    <address class="not-italic mb-4">
+                        456 Avenue de l'Indépendance,<br>
+                        Antananarivo 101,<br>
+                        Madagascar
+                    </address>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i> +261 20 22 123 45
+                    </p>
+                    <p>
+                        <i class="fas fa-clock mr-2"></i> Lun - Ven : 09h - 18h
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition">Accueil</a></li>
+                        <li><a href="propos.html" class="hover:text-indigo-400 transition">À propos de nous</a></li>
+                        <li><a href="offre.html" class="hover:text-indigo-400 transition">Nos offres</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="mention-legale.html" class="hover:text-indigo-400 transition">Mentions légales</a></li>
+                        <li><a href="plan-site.html" class="hover:text-indigo-400 transition">Plan du site</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir nos offres spéciales et les dernières actualités.
+                    </p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-md text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <a href="contact.html">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium transition">
+                            Contactez-nous
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-cc-visa text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-2xl"></i>
+                    <i class="fab fa-cc-amex text-2xl"></i>
+                    <i class="fab fa-cc-paypal text-2xl"></i>
+                </div>
+                <div class="text-gray-400">
+                    &copy; 2023 Mada Travel Agency. Tous droits réservés. | Created by <em>Erckmann</em>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+      function afficherPopup() {
+        alert("Merci ! Votre validation a bien été prise en compte.");
+        window.location.href = "index.html";
+      }
+  </script>
+</body>
+</html>
