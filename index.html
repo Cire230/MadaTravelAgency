@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mada Travel Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-indigo-600">Varecia Travel Agency</div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-indigo-600 font-medium">Accueil</a>
+                <a href="propos.html" class="text-gray-800 hover:text-indigo-600 font-medium">À propos de nous</a>
+                <a href="offre.html" class="text-gray-800 hover:text-indigo-600 font-medium">Nos offres</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="contact.html">
+                    <button class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Contactez-nous
+                    </button>
+                </a>
+                <div class="relative">
+                    <button class="flex items-center space-x-1 text-gray-700">
+                        <span class="font-medium">FR</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-slide h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-4">Découvre nos offre de voyage</h1>
+            <p id="hero-desc" class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Partez à l'aventure avec nos séjours soigneusement conçus pour vous offrir des expériences uniques, entre découverte, nature et immersion culturelle.
+            </p>
+            <div class="text-3xl font-bold mb-8">
+                <span id="hero-price">Que ce soit au nord, au sud ou à l’est de Madagascar, nous vous accompagnons pour une aventure unique et mémorable.</span>
+            </div>
+            <a href="offre.html">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-md text-lg font-medium transition">
+                    En profiter
+                </button>
+            </a>
+        </div>
+        
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 hero-dot active" data-index="0"></button>
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 hero-dot" data-index="1"></button>
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 hero-dot" data-index="2"></button>
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 hero-dot" data-index="3"></button>
+        </div>
+    </section>
+
+    <!-- Avantage section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="mb-20">
+            <h2 class="text-xl md:text-xl font-bold text-gray-600">
+                SIMPLE, PRATIQUE, RAPIDE !
+            </h2>
+            <p class="text-4xl text-indigo-800 font-medium mt-2">Votre voyage de rêve à Madagascar en 3 étapes faciles</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-16 text-left">
+            <!-- Étape 1 -->
+            <div class="relative">
+                <span class="absolute text-[10rem] font-bold text-gray-300 top-[-30px] left-[-10px] leading-none z-0">1</span>
+                <div class="relative z-10 pl-28">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Choisissez votre itinéraire</h3>
+                <p class="text-gray-700 text-base">Explorez des circuits uniques conçus par nos experts de Madagascar et sélectionnez celui qui vous captive.</p>
+                </div>
+            </div>
+
+            <!-- Étape 2 -->
+            <div class="relative">
+                <span class="absolute text-[10rem] font-bold text-gray-300 top-[-30px] left-[-10px] leading-none z-0">2</span>
+                <div class="relative z-10 pl-28">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Personnalisez-le en ligne</h3>
+                <p class="text-gray-700 text-base">Modifiez votre voyage (hébergements, activités, durée) selon vos envies en quelques clics.</p>
+                </div>
+            </div>
+
+            <!-- Étape 3 -->
+            <div class="relative">
+                <span class="absolute text-[10rem] font-bold text-gray-300 top-[-30px] left-[-10px] leading-none z-0">3</span>
+                <div class="relative z-10 pl-28">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Réservez votre voyage</h3>
+                <p class="text-gray-700 text-base">Obtenez votre prix instantanément, confirmez votre réservation et partez à l'aventure malgache !</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avant-goût Section -->
+    <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <!-- Utilisation de grid avec 2 colonnes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+
+        <!-- Colonne de gauche : Titre + Description -->
+        <div class="flex flex-col justify-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Avant-goût</h2>
+            <p class="text-xl text-gray-600">
+                Madagascar, une terre de contrastes et de merveilles, où se mêlent paysages spectaculaires, faune endémique et traditions vivantes, vous promet une aventure aussi riche que captivante.
+            </p>
+        </div>
+
+        <!-- Colonne de droite : 3 images en ligne dans un grid -->
+        <div class="grid grid-cols-3 gap-4 h-full">
+            
+            <!-- Est -->
+            <div class="flex relative group overflow-hidden rounded-lg shadow-lg h-[400px] cursor-pointer">
+                <!-- Image -->
+                <img src="assets/img/avant-gout (1).jpg"
+                    alt="Est"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                <!-- Fond dégradé avec le titre -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 z-10">
+                    <h3 class="text-white text-xl font-bold">Est</h3>
+                </div>
+
+                <!-- Description affichée uniquement au hover -->
+                <div class="absolute inset-0 bg-black/60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-center px-6 z-20">
+                    <p class="text-lg font-medium">Le poumon vert de Madagascar ! Découvrez les forêts primaires d'Andasibe, le canal des Pangalanes, et rencontrez l'Indri Indri, le plus grand des lémuriens. Une immersion dans une nature luxuriante et une côte sauvage.</p>
+                </div>
+            </div>
+
+
+            <!-- Sud -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg h-[400px] cursor-pointer">
+            <!-- Image -->
+                <img src="assets/img/avant-gout (2).jpg"
+                    alt="Est"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                <!-- Fond dégradé avec le titre -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 z-10">
+                    <h3 class="text-white text-xl font-bold">Sud</h3>
+                </div>
+
+                <!-- Description affichée uniquement au hover -->
+                <div class="absolute inset-0 bg-black/60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-center px-6 z-20">
+                    <p class="text-lg font-medium">L'aventure emblématique ! Traversez la célèbre RN7, admirez l'Allée des Baobabs, explorez les canyons du parc de l'Isalo et les plages du Sud-Ouest. Des paysages grandioses et une culture riche.</p>
+                </div>
+            </div>
+
+            <!-- Nord -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg h-[400px] cursor-pointer">
+            <!-- Image -->
+                <img src="assets/img/avant-gout (03).jpg"
+                    alt="Est"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                <!-- Fond dégradé avec le titre -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 z-10">
+                    <h3 class="text-white text-xl font-bold">Nord</h3>
+                </div>
+
+                <!-- Description affichée uniquement au hover -->
+                <div class="absolute inset-0 bg-black/60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-center px-6 z-20">
+                    <p class="text-lg font-medium">Évasion tropicale garantie ! Détendez-vous sur les plages de Nosy Be, plongez dans des eaux turquoise, explorez les Tsingy Rouges ou le parc national de la Montagne d'Ambre. Un concentré de merveilles.</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Nos offres exceptionnelles</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Silver -->
+                <div class="offer-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/img/offre (1).jpg" alt="Silver" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Silver</h3>
+                            <!-- <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Économique</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            L'essentiel de Madagascar pour une première découverte. Explorez les Hautes Terres, rencontrez les lémuriens et imprégnez-vous des paysages verdoyants.
+                        </p>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-gray-700 font-medium">À partir de :</span>
+                            <span class="text-xl font-bold text-indigo-600">1000 € / Personne</span>
+                        </div>
+                        <a href="offre.html">
+                            <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-medium transition">
+                                En profiter
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Gold -->
+                <div class="offer-card bg-white rounded-xl shadow-md overflow-hidden transform scale-105 relative">
+                    <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        POPULAIRE
+                    </div>
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/img/offre (2).jpg" alt="Gold" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Gold</h3>
+                            <!-- <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Confort</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Une aventure plus complète à travers les contrastes de l'île. Combinez parcs nationaux, culture locale et moments de détente sur des plages de charme.
+                        </p>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-gray-700 font-medium">À partir de :</span>
+                            <span class="text-xl font-bold text-indigo-600">2000 € / Personne</span>
+                        </div>
+                        <a href="offre.html">
+                            <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-medium transition">
+                                En profiter
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Platine -->
+                <div class="offer-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/img/offre (3).jpg" alt="Platine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Platine</h3>
+                            <!-- <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Luxe</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            L'expérience malgache par excellence. Circuits sur mesure, hébergements de prestige, sites exclusifs et guides privés pour un voyage inoubliable.
+                        </p>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-gray-700 font-medium">À partir de :</span>
+                            <span class="text-xl font-bold text-indigo-600">3500 € / Personne</span>
+                        </div>
+                        <a href="offre.html">
+                            <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-medium transition">
+                                En profiter
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Nos voyages</h2>
+        </div>
+
+        <!-- Carrousel -->
+        <div class="relative">
+        <!-- Boutons -->
+        <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100">
+            <i class="fas fa-chevron-left text-xs"></i>
+        </button>
+        <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-100">
+            <i class="fas fa-chevron-right text-xs"></i>
+        </button>
+
+            <!-- Slider -->
+            <div id="carousel" class="flex overflow-x-auto scroll-smooth space-x-4 pb-4">
+                <!-- Cartes -->
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (1).jpg" alt="Voyage 1" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Plage</h3>
+                    <p class="text-gray-600 text-sm">Sable fin et eaux turquoise, une invitation à la détente.</p>
+                </div>
+                </div>
+
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (2).jpg" alt="Voyage 2" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Lémurien</h3>
+                    <p class="text-gray-600 text-sm">Curieux et attachant, symbole unique de Madagascar.</p>
+                </div>
+                </div>
+
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (3).jpg" alt="Voyage 3" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Cascade</h3>
+                    <p class="text-gray-600 text-sm">Un spectacle naturel où l’eau danse avec la roche.</p>
+                </div>
+                </div>
+
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (4).jpg" alt="Voyage 3" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Forêt</h3>
+                    <p class="text-gray-600 text-sm">Un écrin de verdure abritant une biodiversité riche.</p>
+                </div>
+                </div>
+
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (5).jpg" alt="Voyage 3" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Jungle</h3>
+                    <p class="text-gray-600 text-sm">Un univers sauvage où la nature règne en maître.</p>
+                </div>
+                </div>
+
+                <div class="min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow cursor-pointer" onclick="zoomImage(this.querySelector('img').src)">
+                <img src="assets/img/voyage (6).jpg" alt="Voyage 3" class="rounded-t-lg h-56 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Désert</h3>
+                    <p class="text-gray-600 text-sm">Paysages arides et dunes dorées sous le soleil brûlant.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!-- Modal Zoom -->
+    <div id="zoomModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50" onclick="closeZoom()">
+        <img id="zoomedImage" src="" alt="Zoom" class="max-h-[90vh] max-w-[90vw] rounded shadow-lg">
+    </div>
+    </section>
+
+    <section class="relative h-[500px] md:h-[600px] overflow-hidden">
+    <!-- Vidéo en fond -->
+        <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+            <source src="assets/img/video.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+
+        <!-- Overlay en dégradé -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+        <!-- Contenu CTA -->
+        <div class="relative z-10 h-full flex items-end md:items-center">
+            <div class="p-6 md:p-16 max-w-xl text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Partez à l'aventure</h2>
+            <p class="text-lg md:text-xl mb-6">
+                Découvrez nos offres de voyages sur mesure à Madagascar et vivez une expérience inoubliable.
+            </p>
+            <a href="offre.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 transition-colors px-6 py-3 rounded-lg text-white text-lg font-semibold shadow-md">
+                Voir nos offres
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mada Travel Agency</h3>
+                    <address class="not-italic mb-4">
+                        456 Avenue de l'Indépendance,<br>
+                        Antananarivo 101,<br>
+                        Madagascar
+                    </address>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i> +261 20 22 123 45
+                    </p>
+                    <p>
+                        <i class="fas fa-clock mr-2"></i> Lun - Ven : 09h - 18h
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition">Accueil</a></li>
+                        <li><a href="propos.html" class="hover:text-indigo-400 transition">À propos de nous</a></li>
+                        <li><a href="offre.html" class="hover:text-indigo-400 transition">Nos offres</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="mention-legale.html" class="hover:text-indigo-400 transition">Mentions légales</a></li>
+                        <li><a href="plan-site.html" class="hover:text-indigo-400 transition">Plan du site</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir nos offres spéciales et les dernières actualités.
+                    </p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l-md text-gray-800">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <a href="contact.html">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium transition">
+                            Contactez-nous
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-cc-visa text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-2xl"></i>
+                    <i class="fab fa-cc-amex text-2xl"></i>
+                    <i class="fab fa-cc-paypal text-2xl"></i>
+                </div>
+                <div class="text-gray-400">
+                    &copy; 2023 Mada Travel Agency. Tous droits réservés. | Created by <em>Erckmann</em>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
