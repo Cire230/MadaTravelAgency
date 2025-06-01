@@ -1,0 +1,45 @@
+.hero-slide {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/offre\ \(2\).jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+.step-card {
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.offer-card {
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: scale(1.03);
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+.dropdown-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+.dropdown-content.open {
+  max-height: 1000px; /* Assez grand pour contenir tout le contenu */
+  opacity: 1;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
